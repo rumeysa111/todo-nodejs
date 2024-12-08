@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const db=require('../config/db');
+// const db=require('../config/db');
 const bcrypt=require('bcrypt');
 const{Schema}=mongoose;
 
@@ -40,5 +40,5 @@ userSchema.methods.comparePassword=async function(userPassword){
     }
 
 };
-const userModel=db.model('user',userSchema);
+const userModel=mongoose.model('user',userSchema);
 module.exports=userModel;

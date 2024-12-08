@@ -1,7 +1,15 @@
 const mongoose = require('mongoose');
 
-const connection = mongoose.createConnection(`mongodb://127.0.0.1:27017/ToDoDB`).on('open',()=>{console.log("MongoDB Connected");}).on('error',()=>{
-    console.log("MongoDB Connection error");
-});
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/todoApp', {
+  
+    });
+    console.log('MongoDB connected');
+  } catch (error) {
+    console.error('MongoDB Connection error:', error);
+    process.exit(1);
+  }
+};
 
-module.exports = connection;
+module.exports = connectDB;

@@ -20,5 +20,5 @@ const todoSchema=new Schema({
   
 });
 
-const todoModel=db.model('todo',todoSchema);
+const todoModel=mongoose.model('todo',todoSchema);
 module.exports=todoModel;
