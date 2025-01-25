@@ -18,7 +18,7 @@ A simple Node.js backend for managing to-do tasks with CRUD operations. Uses Mon
 
 1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/your-username/todo-backend.git](https://github.com/rumeysa111/deneme_nodejs.git)
+   git clone https://github.com/rumeysa111/todo-nodejs.git
  
 
 2. **Install dependencies**:
